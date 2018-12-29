@@ -2,6 +2,7 @@ import sys
 
 def printout(aa, m):
   print "From 2 - {}".format(m)
+  m += 1
   for i in range(m):
     for j in range(m):
       if aa[i][j]:
