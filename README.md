@@ -13,7 +13,7 @@ Story
 * B looks the sum and answer: I don't know, and you?
 * A looks the production and say: I don't know either.
 * B then say: if you don't know, I know.
-* A follows: if you know then I know.
+* A follows immediatly: if you know then I know.
 
 Question
 -----
@@ -23,11 +23,18 @@ Question
 
 Answer
 -----
+1. Yes!
+2. No, but (3,4) is one possible solution.
+3. A and B are SMART, I'm not foolish also.
+
+Refers
+-----
 - nm.py -- python program
-- nm.c  -- c program (created on last centry)
+- nm.c  -- c program (created on last century)
 
 Note
 -----
 * python mn.py [range] [trace] [debug]
 * default range is 99
-* Try giving different range and get more understanding  
+* verify each solution youself
+* try giving different range and get more understanding  
