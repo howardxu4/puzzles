@@ -46,9 +46,11 @@ Same condition but ask order changes
 2. A ask B, B don't know
 3. then A know
 4. B follows know also
-What are the two number?
+5. What are the two number?
 
 History story
-SunBin and PangJiuan guessing number
+- SunBin and PangJiuan guessing number
 
--- guessnum.py
+- guessnum.py -- python program (full solutions)
+- python guessnum.py [range]
+
