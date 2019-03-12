@@ -7,11 +7,11 @@ Story
 ------
 * Two integers N and  M are between [2, 99]
 * There are two smart persons A and B
-* A knows the production of two numbers (N*M)
+* A knows the product of two numbers (N*M)
 * B knows the sum of two numbers (N+M)
 * A ask B: Can you guess out of the two numbers?
 * B looks the sum and answer: I don't know, and you?
-* A looks the production and say: I don't know either.
+* A looks the product and say: I don't know either.
 * B then say: if you don't know, I know.
 * A follows immediatly: if you know then I know.
 
@@ -38,3 +38,17 @@ Note
 * default range is 99
 * verify each solution youself
 * try giving different range and get more understanding  
+
+Update
+-----
+Same condition but ask order changes
+1. B ask A, A don't know
+2. A ask B, B don't know
+3. then A know
+4. B follows know also
+What are the two number?
+
+History story
+SunBin and PangJiuan guessing number
+
+-- guessnum.py

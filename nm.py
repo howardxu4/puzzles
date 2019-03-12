@@ -6,7 +6,7 @@ def printout(aa, m):
   for i in range(m):
     for j in range(m):
       if aa[i][j]:
-        print i, j
+        print i, j, aa[i][j]
 
 def getmatrix(m):
    m += 1
