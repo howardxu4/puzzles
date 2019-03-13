@@ -48,9 +48,10 @@ Same condition but ask order changes
 4. B follows know also
 5. What are the two number?
 
-History story
-- SunBin and PangJiuan guessing number
-
 - guessnum.py -- python program (full solutions)
 - python guessnum.py [range]
 
+History story
+- SunBin and PangJiuan guessing number
+
+神仙鬼谷子为了考验他的两个高徒孙膑和庞涓，精心挑选了两个大于1、小于100的整数，将两数之积告诉孙膑，两数之和告诉庞涓，要他们猜出这两个整数。这就是著名的孙膑猜数问题。出题后，两位高徒琢磨一番。庞涓对孙膑说：“虽然我能肯定你不知道这两个数，但我也不知道。”于是孙膑说“我现在知道了。”庞涓也跟着说：“我也知道了
