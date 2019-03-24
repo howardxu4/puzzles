@@ -115,6 +115,12 @@ def sunpangnumber(m, n, DS, DP, NDP):
       cnt += 1
   return cnt == 1
 
+def help():
+  print "Usage: python " + sys.argv[0] + " [range] [num]"
+  print " range: integer, default 99"
+  print " num: 1, 2, 4 or combination, default 7"
+  sys.exit(0)
+
 def main():
   """MAIN (defalt 99, can accept parameter to change)
   """
@@ -123,7 +129,13 @@ def main():
     try:
       D = int(sys.argv[1])
     except:
-      pass
+      help()
+  N=7
+  if len(sys.argv) > 2:
+    try:
+      N = int(sys.argv[2])
+    except:
+      help()
   print "m, n in (1 ~ " + str(D) + ") A: m*n B: m+n "
   A = getmatrix(D)
   # SUM table
@@ -138,24 +150,17 @@ def main():
   loop(A, D, dictpair, DP)
   # number of DP
   loop(A, D, cnvtnum, DP)
-
-  print "No-Know-Know: [A->B: No] B->A: No, A: Know, B: Know"
-  for m in range(2, D):
-    for n in range(m, D):
-      if noknowknow(m, n, DS, DP, A):
-        print m, n, ":", m+n, m*n
-
-  print "No-No-Know-Know: B->A: No, A->B: No, A: Know, B: Know"
-  for m in range(2, D):
-    for n in range(m, D):
-      if nonoknowknow(m, n, DS, DP, A):
-        print m, n, ":", m+n, m*n
-
-  print "Sun-Pang-Number: P->S: No both, S: Know, P: Know"
-  for m in range(2, D):
-    for n in range(m, D):
-      if sunpangnumber(m, n, DS, DP, A):
-        print m, n, ":", m+n, m*n
+  CMS = [ "", "No-Know-Know: [A->B: No] B->A: No, A: Know, B: Know",
+        "No-No-Know-Know: B->A: No, A->B: No, A: Know, B: Know", "",
+        "Sun-Pang-Number: P->S: No both, S: Know, P: Know" ]
+  CMD = [ None, noknowknow, nonoknowknow, None, sunpangnumber ]
+  for i in [ 1, 2, 4 ]:
+    if N & i:
+      print CMS[i]
+      for m in range(2, D):
+        for n in range(m, D):
+           if CMD[i](m, n, DS, DP, A):
+             print m, n, ":", m+n, m*n
 
 if __name__ == "__main__":
   main()
